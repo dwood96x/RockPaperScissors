@@ -10,20 +10,20 @@ namespace RPS
     {
         static void Main(string[] args)
         {
-            fight();
-            /* do
+            int played = 0;
+            do
             {
                 fight();
-            } while played == 0;
-            */
+            } while (played == 0);
+            
         }
         public static void fight()
         {
             Console.WriteLine("Lets play rock paper scissors! Whats your choice?");
-            string pChoice = Console.ReadLine();
-            pChoice.ToLower();
+            string pChoiceOrig = Console.ReadLine();
+            string pChoice = pChoiceOrig.ToLower();
             Random random = new Random();
-            int aiChoice = random.Next(2);
+            int aiChoice = random.Next(3);
             // 0 == rock, 1 == paper, 2 == scissors for the AI decision
             if (pChoice == "rock")
             {
@@ -74,6 +74,17 @@ namespace RPS
             {
                 Console.WriteLine("Invalid input!");
             }
+        }
+        public static void menu()
+        {
+            /*
+            Console.WriteLine("Would you like to keep playing? Yes or no?");
+            string menuChoice = Console.ReadLine();
+            if (menuChoice == "yes")
+            {
+                
+            }
+            */
         }
         
     }
