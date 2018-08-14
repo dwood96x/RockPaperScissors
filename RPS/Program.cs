@@ -31,7 +31,7 @@ namespace RPS
                 {
                     Console.WriteLine("Draw! You both picked rock!");
                 }
-                if (aiChoice == 1)
+                else if (aiChoice == 1)
                 {
                     Console.WriteLine("You lost! Their paper beat your rock!");
                 }
@@ -40,13 +40,13 @@ namespace RPS
                     Console.WriteLine("You won! Congradulations!");
                 }
             }
-            if (pChoice == "paper")
+            else if (pChoice == "paper")
             {
                 if (aiChoice == 0)
                 {
                     Console.WriteLine("You won! Your paper beat their rock!");
                 }
-                if (aiChoice == 1)
+                else if (aiChoice == 1)
                 {
                     Console.WriteLine("Draw! You both picked paper!");
                 }
@@ -55,13 +55,13 @@ namespace RPS
                     Console.WriteLine("You lost! Their scissors beat your rock!");
                 }
             }
-            if (pChoice == "scissors")
+            else if (pChoice == "scissors")
             {
                 if (aiChoice == 0)
                 {
                     Console.WriteLine("You lost! Their rock beat your scissors!");
                 }
-                if (aiChoice == 1)
+                else if (aiChoice == 1)
                 {
                     Console.WriteLine("You win! Your scissors beat their paper!");
                 }
