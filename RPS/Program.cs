@@ -10,10 +10,12 @@ namespace RPS
     {
         static void Main(string[] args)
         {
-            do
+            fight();
+            /* do
             {
                 fight();
             } while played == 0;
+            */
         }
         public static void fight()
         {
@@ -22,9 +24,57 @@ namespace RPS
             pChoice.ToLower();
             Random random = new Random();
             int aiChoice = random.Next(2);
-
-            if pChoice /=
-
+            // 0 == rock, 1 == paper, 2 == scissors for the AI decision
+            if (pChoice == "rock")
+            {
+                if (aiChoice == 0)
+                {
+                    Console.WriteLine("Draw! You both picked rock!");
+                }
+                if (aiChoice == 1)
+                {
+                    Console.WriteLine("You lost! Their paper beat your rock!");
+                }
+                else
+                {
+                    Console.WriteLine("You won! Congradulations!");
+                }
+            }
+            if (pChoice == "paper")
+            {
+                if (aiChoice == 0)
+                {
+                    Console.WriteLine("You won! Your paper beat their rock!");
+                }
+                if (aiChoice == 1)
+                {
+                    Console.WriteLine("Draw! You both picked paper!");
+                }
+                else
+                {
+                    Console.WriteLine("You lost! Their scissors beat your rock!");
+                }
+            }
+            if (pChoice == "scissors")
+            {
+                if (aiChoice == 0)
+                {
+                    Console.WriteLine("You lost! Their rock beat your scissors!");
+                }
+                if (aiChoice == 1)
+                {
+                    Console.WriteLine("You win! Your scissors beat their paper!");
+                }
+                else
+                {
+                    Console.WriteLine("Draw! You both picked scissors!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input!");
+            }
         }
+        
     }
 }
